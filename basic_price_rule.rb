@@ -1,3 +1,5 @@
+require_relative 'abstract_price_rule'
+
 class BasicPriceRule < AbstractPriceRule
 
   def initialize(base_price)
@@ -5,6 +7,6 @@ class BasicPriceRule < AbstractPriceRule
   end
 
   def calculate_price(quantity)
-    base_price * quantity
+    @base_price * quantity
   end
 end

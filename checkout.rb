@@ -15,7 +15,7 @@ class Checkout
   def total
     total = 0
     @purchases.each do |item, quantity|
-      total += rules[item].calculate_price(quantity)
+      total += @rules[item].calculate_price(quantity)
     end
     total
   end
